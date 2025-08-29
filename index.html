@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Responsive Navbar — Contact + Sun/Moon + Sidebar</title>
+
+<!-- Font Awesome for icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- remaaning things style all and add al things and apply media -->
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="left">
+        <a class="logo" href="#"><img src="./resources/logo.png" alt=""></a>
+      </div>
+
+      <!-- center links (desktop) -->
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Gallery</a>
+        <a href="#">Team</a>
+      </nav>
+
+      <!-- right controls -->
+      <div class="right-controls">
+        <!-- mobile simple toggle -->
+        <button class="icon-btn tdnn-mobile mobile-only" id="mobileToggle" aria-label="Toggle theme (mobile)">
+          <i class="fa-solid fa-moon" id="mobileToggleIcon"></i>
+        </button>
+
+        <!-- contact icon (mobile) -->
+        <button class="icon-btn mobile-only" id="contactIconMobile" aria-label="Contact (mobile)">
+          <i class="fa-solid fa-envelope contact-icon"></i>
+        </button>
+
+        <!-- Hamburger (mobile) - outer button contains inner bars span -->
+        <button class="icon-btn mobile-only" id="hamburgerBtn" aria-label="Open menu">
+          <span id="hamburgerBars" class="hamburger-bars" aria-hidden="true">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </span>
+        </button>
+
+        <!-- desktop contact -->
+        <button class="contact-btn desktop-only" id="contactBtnDesktop">
+          <span>Contact</span>
+        </button>
+
+        <!-- desktop advanced toggle -->
+        <div class="tdnn-desktop desktop-only" id="tdnnDesktop" role="button" aria-label="Toggle theme (desktop)">
+          <div class="moon" id="moonDesktop"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="#"><i class="fa-solid fa-briefcase"></i> Projects</a>
+    <a href="#"><i class="fa-solid fa-image"></i> Gallery</a>
+    <a href="#"><i class="fa-solid fa-users"></i> Team</a>
+    <div class="contact-row">
+      <a class="button-like" href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop" tabindex="-1" aria-hidden="true"></div>
+  <!-- main-content -->
+  <main style="padding:120px 20px 60px; max-width:1100px; margin:0 auto;">
+    <section>
+       <!-- main-container -->
+      <div class="content-container">
+      <div class="content">
+        <section class="main-section" style="display: flex; flex-direction: row;">
+            <div class="content-left "style="display: flex; flex-direction: column;align-items:flex-start;margin-left: 0px">
+                <p class="section-label" style="flex: ;">Introducing to team<span style="font-weight: bold;">unwired</span></p>
+                <h1 class="section-title" style="margin-left: 0px; display: flex;">We Ensure Innovation for a better world</h1>
+                <p class="section-description">The next level of Innovation starts here, At team unwired minds meet and innovation begins. #StayUnwired</p>
+                <div class="button-group">
+                    <a href="#start" id="start-button">#STAYUNWIRED</a>
+
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="image-container">
+                    <img src="./resources/bg-1.jpg" alt="section img" class="section-image">
+                </div>
+            </div>
+
+        </section>
+    </div>
+    </div>
+    </section>
+    <!-- compines -->
+     <div class="company-container">
+        <h2 class="company-title">sponsered by the best</h2>
+        <div class="company-grid fadeup">
+            <div class="company-logo">
+                <img src="./resources/Google.svg" alt="google" class="svg-img">
+                <span class="logo-text">Google</span>
+            </div>
+             <div class="company-logo">
+                <img src="./resources/Microsoft.svg" alt="Microsoft" class="svg-img">
+                <span class="logo-text">Microsoft</span>
+            </div>
+             <div class="company-logo">
+                <img src="./resources/linkedin-copy.svg" alt="linkedin" class="svg-img">
+                <span class="logo-text">linkedin</span>
+            </div>
+             <div class="company-logo">
+                <img src="./resources/VectorEdu.svg" alt="VectorEdu" class="svg-img">
+                <span class="logo-text">VectorEdu</span>
+            </div>
+        </div>
+    <!-- grid-cards-container -->
+     <div class="grid-cards-container">
+    <div class="grid-card">
+      <h2>Card One</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit inventore laborum accusamus perspiciatis blanditiis libero vel voluptatibus atque est debitis, earum ipsam accusantium voluptate reprehenderit! Sit recusandae rerum blanditiis obcaecati.</p>
+    </div>
+    <div class="grid-card">
+      <h2>Card Two</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem enim dolorem illo sit sunt, architecto numquam culpa eum doloribus, ut quae perferendis laboriosam fugit ratione vitae quaerat accusamus neque fuga.</p>
+    </div>
+    <div class="grid-card">
+      <h2>Card Three</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem tempore, iusto ea, sunt voluptatum reiciendis odio nihil id dolores numquam odit sequi iste in nam, dignissimos molestias exercitationem repellendus eius?</p>
+    </div>
+   </div>
+   <!--slide-show  -->
+     <div class="container" role="main" aria-label="Projects Showcase">
+    <div class="left">
+      <h1>Our Projects</h1>
+      <div class="dynamic" aria-live="polite" aria-atomic="true">
+        <h2 id="dyn-heading">Project 1</h2>
+        <p id="dyn-para">Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+      <button tabindex="0" aria-label="Explore More Projects">Explore More</button>
+    </div>
+    <div class="right">
+      <div class="slideshow" id="slideshow" role="region" aria-label="Project images slideshow" tabindex="0">
+        <img src="./resources/wallpapers-1.jpg" alt="Project Visual 1" class="active" />
+        <img src="./resources/wallpapers-6.jpg" alt="Project Visual 2" />
+        <img src="./resources/wallpaper-7.jpg" alt="Project Visual 3" />
+        <img src="./resources/wallpaper-8.jpg" alt="Project Visual 4" />
+        <img src="./resources/wallpapers-2.jpg" alt="Project Visual 5" />
+        <img src="./resources/wallpapers-4jpg.jpg" alt="Project Visual 6" />
+      </div>
+      <div class="controls" id="controls" role="toolbar" aria-label="Image slideshow controls" tabindex="0"></div>
+    </div>
+  </div>
+   <!-- founder and devloper section  -->
+     <div class="testimonial-container ">
+      <div class="testimonial-contant">
+        <h2 class="testimonial-title autoshow">What Other Say About US</h2>
+        <div class="testimonial-grid">
+          <!-- card 1 -->
+            <div class="testimonial-card cardreveal">
+             <div class="testimonial-text">
+            "LoreM ipsum dolor sit amet consectetur adipisicing elit. Quidem tempore, iusto ea, sunt voluptatum reiciendis odio nihil id dolores numquam odit sequi iste in nam, dignissimos molestias exercitationem repellendus eius?"
+             </div>
+             <div class="testimonial-avtar">
+              <img src="./resources/avatar1.png" class="testimonial-avtar-img">
+             </div>
+             <div class="testimonial-info">
+              <h3 class="avtar-name">
+                Sarah Jhonson
+              </h3>
+              <p class="avtar-info">
+                Manager
+              </p>
+             </div>
+           </div>
+           <!-- card 2 -->
+            <div class="testimonial-card cardreveal">
+             <div class="testimonial-text">
+              " Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nihil ea dolor ipsum dolore tempore adipisci exercitationem quisquam amet consequuntur vel doloribus nemo, pariatur tenetur esse sequi nesciunt fuga! Odio.
+             </div>
+             <div class="testimonial-avtar">
+              <img src="./resources/avatar2.png" class="testimonial-avtar-img">
+             </div>
+             <div class="testimonial-info">
+              <h3 class="avtar-name">
+               Mark Davis
+              </h3>
+              <p class="avtar-info">
+                C.E.O.
+              </p>
+             </div>
+           </div>
+           <!-- card 3 -->
+            <div class="testimonial-card cardreveal">
+             <div class="testimonial-text">
+              "SyudySync,a true game-changer! Flexible content, tailored assignments, and excellent support. integral to our school district's success"
+             </div>
+             <div class="testimonial-avtar" >
+              <img src="./resources/avatar3.png" class="testimonial-avtar-img">
+             </div>
+             <div class="testimonial-info">
+              <h3 class="avtar-name">
+                Dr.James Carter 
+              </h3>
+              <p class="avtar-info">
+                 Investor
+              </p>
+             </div>
+           </div> 
+           <!-- card 4 -->
+             <div class="testimonial-card cardreveal">
+             <div class="testimonial-text">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem tempore, iusto ea, sunt voluptatum reiciendis odio nihil id dolores numquam odit sequi iste in nam, dignissimos molestias exercitationem repellendus eius?"
+             </div>
+             <div class="testimonial-avtar">
+              <img src="./resources/avatar3.png" class="testimonial-avtar-img">
+             </div>
+             <div class="testimonial-info">
+              <h3 class="avtar-name">
+                Ankit Jangir
+              </h3>
+              <p class="avtar-info">
+                 web Developer
+              </p>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+   <!-- become an sponser  -->
+   <!-- Faq -->
+ <div class="faq">
+    <h1>Frequently Asked Questions</h1>
+   <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq1">What is teamUnwired?</button>
+      <div id="faq1" class="faq-answer" aria-hidden="true">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa soluta labore inventore aspernatur error deserunt sed voluptatibus ipsa rem, tempore eius eligendi placeat, fugiat consequatur id, possimus natus tenetur nam!
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq2">How much does Netflix cost?</button>
+      <div id="faq2" class="faq-answer" aria-hidden="true">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa soluta labore inventore aspernatur error deserunt sed voluptatibus ipsa rem, tempore eius eligendi placeat, fugiat consequatur id, possimus natus tenetur nam!
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq3">Where can I Find?</button>
+      <div id="faq3" class="faq-answer" aria-hidden="true">
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa soluta labore inventore aspernatur error deserunt sed voluptatibus ipsa rem, tempore eius eligendi placeat, fugiat consequatur id, possimus natus tenetur nam!
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq4">How do I register?</button>
+      <div id="faq4" class="faq-answer" aria-hidden="true">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa soluta labore inventore aspernatur error deserunt sed voluptatibus ipsa rem, tempore eius eligendi placeat, fugiat consequatur id, possimus natus tenetur nam!
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq5">What can I learn from Teamunwired?</button>
+      <div id="faq5" class="faq-answer" aria-hidden="true">
+        Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+      </div>
+    </div>
+   </div>
+  </div>
+    <!-- contact form and slider  -->
+   <div class="contect-main-container">
+       <div class="container">
+     <form class="form-pane" id="contactForm" autocomplete="off" novalidate>
+      <h2>Contact Us</h2>
+      <div class="form-group">
+        <label for="name">Your Name </label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="off" required>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="email">Your Email </label>
+          <input type="email" id="email" name="email" placeholder="example123@mail.com" autocomplete="off" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Your Phone No.</label>
+          <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+      </div>
+      <div class="form-group" style="margin-bottom: 6px; display: flex;align-items: center;">
+        <input type="checkbox" id="terms" required>
+        <label for="terms" class="terms-label">I agree to the <a href="#" style="color:var(--accent);">Terms & Policy</a></label>
+      </div>
+      <div class="button-row">
+        <button type="submit">Send Message</button>
+        <span class="form-msg" id="formMsg"></span>
+      </div>
+    </form>
+    <div class="slider-pane">
+      <div class="slider-title">What People Are Saying</div>
+      <div class="review-slider" id="reviewSlider"></div>
+      <div class="slider-controls" id="sliderControls">
+        <button class="slider-nav" id="prevBtn" aria-label="Previous feedback">&#8592;</button>
+        <!-- Dots added by JS -->
+        <button class="slider-nav" id="nextBtn" aria-label="Next feedback">&#8594;</button>
+      </div>
+    </div>
+  </div>
+   </div>
+   <!-- footer -->
+    <div class="footer-container">
+      <footer class="footer">
+        <!-- footer left -->
+         <div class="footer-left">
+          <div class="company-logo">
+            <a href="#logo" class="logo">
+                <img src="./resources/logo.png" alt="logo-img" class="footer-main-logo-img">
+                <span class="footer-logo-main-text">Teamunwired</span>
+            </a>
+            </div>
+            <p class="footer-left-line">Learning for Furture</p>
+          <div class="left-logo-section">
+            <a href="https://www.instagram.com/a.jangir0827/">
+              <img src="./resources/instagram.svg" class="footer-logo">
+            </a>
+            <a href="https://x.com/AnkitJangir0827">
+              <img src="./resources/twitter copy.svg" class="footer-logo">
+            </a>
+            <a href="https://www.linkedin.com/in/ankit-jangir-ba438035b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              <img src="./resources/linkedin-copy.svg" class="footer-logo">
+            </a>
+            <a href="https://github.com/ankitjangir0827">
+              <img src="./resources/github.svg" alt="" class="footer-logo">
+            </a>
+          </div>
+         </div>
+         <!-- footer right -->
+          <div class="footer-right">
+            <div class="footer-grid">
+              <!-- column 1 -->
+              <div class="footer-grid-column1">
+                <h2 class="grid-column-heading">
+                  Products
+                </h2>
+                <ul class="column-detailes">
+                  <li><a href="#">Overview</a></li>
+                  <li><a href="#">Solution</a> </li>
+                  <li><a href="#">Pricing</a></li>
+                  <Li><a href="#">Cuastmber</a></Li>
+                </ul>
+              </div>
+               <!-- column 2 -->
+                <div class="footer-grid-column1">
+                <h2 class="grid-column-heading">
+                  Company
+                </h2>
+                <ul class="column-detailes">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Investor Relations</a></li>
+                  <li><a href="#">Jobs</a></li>
+                  <Li><a href="#">Press</a></Li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+               <!-- column 3 -->
+                <div class="footer-grid-column1">
+                <h2 class="grid-column-heading">
+                  Support
+                </h2>
+                <ul class="column-detailes">
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Documentation</a></li>
+                  <li><a href="#">Chat</a></li>
+                  <Li><a href="#">FAQ</a></Li>
+                </ul>
+              </div>
+               <!-- column 4 -->
+              <div class="footer-grid-column1">
+                <h2 class="grid-column-heading">
+                  Legal
+                </h2>
+                <ul class="column-detailes">
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Cookie Settings</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> 
+      </footer>
+      <div class="footer-copyright">
+        <p class="copyright-text">
+          &COPY;2024-Present Teamunwired.All rights reserved.
+        </p>
+      </div>
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
